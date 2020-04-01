@@ -10,9 +10,8 @@
     /* --------------- Connect to database --------------- */
 
     (async () => {
-        console.log("Connecting to database test");
+        console.log("Connecting to database");
         console.log(process.env.MONGODB_URL);
-        console.log("Passed test");
         await mongoose.connect(process.env.MONGODB_URL, {
             useNewUrlParser: true,
             useUnifiedTopology: true,

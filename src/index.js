@@ -13,8 +13,6 @@ console.clear();
 
     const
         express = require("express"),
-        // path = require("path"),
-        envCmd = require("env-cmd"),
         userRouter = require("./routers/user"),
         taskRouter = require("./routers/task");
 
