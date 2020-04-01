@@ -7,17 +7,11 @@
 
     const mongoose = require("mongoose");
 
-    /* --------------- Configure database --------------- */
-
-    const
-        connectionURL = process.env.MONGODB_URL,
-        databaseName = "taskManagerApi";
-
     /* --------------- Connect to database --------------- */
 
     (async () => {
         console.log("Connecting to database");
-        await mongoose.connect(`${connectionURL}/${databaseName}`, {
+        await mongoose.connect(process.env.MONGODB_URL, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
             useCreateIndex: true,
