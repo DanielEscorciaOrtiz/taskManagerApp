@@ -17,10 +17,10 @@
             if (!user) throw new Error();
             request.user = user;
             request.token = token;
+            next();
         } catch (error) {
             response.status(401).send({error:"Please authenticate"});
         }
-        next();
     }
     // const token = jwt.sign({ _id: "abc123" }, "example", { expiresIn: "1 day" });
     //     console.log(token);
